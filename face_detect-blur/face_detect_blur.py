@@ -45,12 +45,8 @@ if __name__=="__main__":
         elif k == ord('s'): # wait for 's' key to save and exit
             cv2.imwrite('./out/blur_face_image_'+str(count)+'.png',frame)
             cv2.destroyAllWindows()
+            count +=1
                 
-        # if cv2.waitKey(1) & 0xFF == ord('q'):
-        #     break
-        
-        count +=1
-    
     #Release camera
     cap.release()
     # Close all windows
